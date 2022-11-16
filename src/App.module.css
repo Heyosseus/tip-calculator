@@ -1,0 +1,16 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.heading{
+  width: 86.66px;
+  height: 53.14px;
+  color: var(--very-dark-cyan);
+  font-family: var(--space-mono);
+  letter-spacing: 6px;
+  font-size: 22px;
+  margin-bottom: 64px;
+}
+

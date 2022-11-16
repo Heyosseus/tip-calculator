@@ -1,0 +1,226 @@
+.container{
+  display: flex;
+  flex-direction: column;
+}
+
+.card{
+    background: var(--white);
+    width: 920px;
+    height: 481px;
+    box-shadow: 0px 32px 43px rgba(79, 166, 175, 0.200735);
+    border-radius: 25px;
+    display: flex;
+    /* flex-direction: column; */
+}
+
+.first__col{
+    display: flex;
+    flex-direction: column;
+    margin-left: 48px;
+    
+}
+
+.bill__paragraph{
+    font-family: var(--space-mono);
+    font-size: 16px;
+    line-height: 23.7px;
+    color: var(--grayish-cyan);
+    width: 40px;
+    height: 24px;
+    margin-top: 45px;
+}
+
+.bill__form{
+    width: 379px;
+    height: 44px;
+    border-radius: 5px;
+    background: var(--very-light-grayish-cyan);
+    font-size: 22px;
+    outline: none;
+    border: none;
+    display: flex;
+}
+.bill__form__error{
+    width: 379px;
+    height: 44px;
+    border-radius: 5px;
+    background: var(--very-light-grayish-cyan);
+    font-size: 22px;
+    outline: none;
+    border: 1px solid #E17052;
+    display: flex;
+}
+
+
+.dollar{
+    background-image: url(../../assets/icon-dollar.svg);
+    width: 10px;
+    height: 16px;
+    color: var(--grayish-cyan);
+    margin-top: 12px;
+    margin-left: 14px;
+}
+
+.bill__input{
+    width: 99px;
+    height: 26px;
+    opacity: 0.35;
+    font-family: var(--space-mono);
+    text-align: right;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    margin-left: 253px;
+    margin-top: 6px;   
+}
+
+
+.bill__input:focus{
+    color: var(--very-dark-cyan);
+    opacity: 1;
+    background:var(--very-light-grayish-cyan);
+}
+.bill__form:hover{
+    border: 1px solid var(--strong-cyan);
+    cursor: pointer;
+}
+
+.select__paragraph{
+    width: 118px;
+    height: 24px;
+    margin-top: 40px;
+    font-family: var(--space-mono);
+    color: var(--grayish-cyan);
+    font-size: 16px;
+}
+
+.btn__container{
+    width: 389px;
+    margin-top: 8px;
+}
+.button{
+    width: 117px;
+    height: 48px;
+    border-radius: 5px;
+    background: var(--very-dark-cyan);
+    color: var(--white);
+    row-gap: 14px;
+    border: none;
+    margin: 10px 12px 0 0 ;
+    font-family: var(--space-mono);
+    font-size: 22px;
+}
+
+.button:hover{
+    background: #9FE8DF;
+    color: var(--very-dark-cyan);
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+
+.button__form{
+    width: 118px;
+    height: 50px;
+    background: var(--very-light-grayish-cyan); 
+    border-radius: 5px;
+    border: none; 
+}
+
+.button__form:hover{
+    border: 1px solid var(--strong-cyan);
+    cursor: pointer;
+}
+
+.btn__input{
+    width: 93px;
+    height: 36px;
+    color: var(--very-dark-cyan);
+    font-size: 24px;
+    line-height: 35px;
+    text-align: right;
+    font-family: var(--space-mono);
+    border: none;
+    outline: none;
+    background-color: var(--very-light-grayish-cyan);
+}
+
+.num__paragraph{
+    width: 358px;
+    height: 24px;
+    margin-top: 40px;
+    margin-bottom: 6px;
+    font-family: var(--space-mono);
+    color: var(--grayish-cyan);
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.num__error{
+    font-size: 16px;
+    color: #E17052;
+}
+.num__hidden{
+    display: none;
+}
+
+.person{
+    background-image: url(../../assets/icon-person.svg);
+    width: 13px;
+    height: 16px;
+    color: var(--grayish-cyan);
+    margin-top: 12px;
+    margin-left: 12px;
+}
+
+/* media queris */
+
+@media screen and (max-width:375px) {
+    .container{
+        display: flex;
+    }
+    .card{
+        width: 375px;
+        height: 789px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .bill__paragraph{
+        width: 47px;
+        height: 24px;
+        
+    }
+
+    .bill__form{
+        width: 311px;
+    }
+    .bill__input{
+        width: 16px;
+    }
+
+    .select__paragraph{
+        width: 140px;
+    }
+    .btn__container{
+        width: 311px;
+        height: 156px;
+    }
+    .button{
+        width: 142px;
+    }
+    .num__paragraph{
+        width: 186px;
+        height: 24px;
+    
+    }
+    .second__col{
+        width: 327px;
+        height: 257px;
+    }
+    .tip{
+        width: 327px;
+        height: 257px;
+    }
+}

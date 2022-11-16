@@ -1,0 +1,93 @@
+.container{
+    width: 413px;
+    height: 417px;
+    border-radius: 15px;
+    background-color: var(--very-dark-cyan);
+    margin-top: 32px;
+    margin-left: 38px;
+}
+
+.amount{
+    display: flex;
+}
+.total{
+    display: flex;
+}
+.tip__paragraph{
+    width: 98px;
+    height: 24px;
+    font-family: var(--space-mono);
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--white);
+    margin-left: 40px;
+    margin-top: 80px;
+}
+
+.span{
+    width: 64px;
+    height: 19px;
+    margin-top: 24px;
+    font-size: 13px;
+    font-family: var(--space-mono);
+    color: var(--dark-grayish-cyan);
+}
+
+.tip__form{
+    background: transparent;
+    margin-top: 60px;
+    margin-left: 100px;
+    width: 143px;
+    height: 41px;
+    font-family: var(--space-mono);
+    font-size: 48px;
+    line-height: 70px;
+}
+
+.tip__input{
+    font-family: var(--space-mono);
+    font-size: 42px;
+    line-height: 60px;
+    width: 143px;
+    background: transparent;
+    border: none;
+    color: var(--strong-cyan);
+    text-align: right;
+}
+
+.tip__input:hover,
+.tip__input:focus{
+    border: none;
+    outline: none
+}
+
+.button{
+    width: 333px;
+    height: 48px;
+    border-radius: 5px;
+    background: var(--strong-cyan);
+    font-family: var(--space-mono);
+    border: none;
+    outline: none;
+    margin-left: 40px;
+    margin-top:122px;
+    font-size: 20px;
+    color: var(--very-dark-cyan);
+    line-height: 30px;
+}
+.button:hover{
+    background: #9FE8DF;
+    transition: all 0.3s ease-in;
+    cursor: pointer;
+}
+
+.button:active{
+    background: #0D686D
+}
+
+@media screen and (max-width:375px) {
+    .tip__container{
+        width: 327px;
+        height: 257px;
+    }
+}
