@@ -85,7 +85,7 @@
     background: #0D686D
 }
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:476px) {
     .container{
         width: 327px;
         height: 257px;

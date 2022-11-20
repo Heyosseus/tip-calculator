@@ -176,7 +176,7 @@
 
 /* media queris */
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:476px) {
     .container{
         display: flex;
     }
