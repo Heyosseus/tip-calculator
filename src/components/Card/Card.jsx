@@ -4,9 +4,9 @@ import TipCalc from '../TipCalc/TipCalc';
 import { useState } from 'react';
 
 const Card = ({bill, setBill, number, setNumber, custom, setCustom}) => { 
-  const [num, setNum] = useState(`$0.00`);
-  const [total, setTotal] = useState(`$0.00`);
 
+  const [value, setValue] = useState(0)
+  
   return (
     <div className={card.container}>
       <div className={card.card}>
@@ -19,24 +19,24 @@ const Card = ({bill, setBill, number, setNumber, custom, setCustom}) => {
               className={card.bill__input}
               value={bill}
               onClick={() => setBill('')}
-              onChange={(e) => setBill(e.target.value)}
+              onChange={(e) => setBill(+e.target.value)}
             />
           </form>
 
           <p className={card.select__paragraph}>Select Tip %</p>
           <div className={card.btn__container}>
-            <button className={card.button}>5%</button>
-            <button className={card.button}>10%</button>
-            <button className={card.button}>15%</button>
-            <button className={card.button}>25%</button>
-            <button className={card.button}>50%</button>
+            <button className={card.button} onClick={() => setValue(5)}>{ value ===5 ? 5 :5 }%</button>
+            <button className={card.button} onClick={() => setValue(10)}>{ value ===10 ? 10 :10 }%</button>
+            <button className={card.button} onClick={() => setValue(15)}>{ value ===15 ? 15 :15 }%</button>
+            <button className={card.button} onClick={() => setValue(25)}>{ value ===25 ? 25 :25 }%</button>
+            <button className={card.button} onClick={() => setValue(50)}>{ value ===50 ? 50 :50 }%</button>
             <button className={card.button__form}>
               <input
                 type="text"
                 className={card.btn__input}
                 value={custom}
                 onClick={()=>setCustom('')}
-                onChange={e=>setCustom(e.target.value)}
+                onChange={e=>setCustom(+e.target.value)}
               />
             </button>
           </div>
@@ -48,17 +48,21 @@ const Card = ({bill, setBill, number, setNumber, custom, setCustom}) => {
               type="text"
               className={card.bill__input}
               value={number}
-              onChange={e=>setNumber(e.target.value)}
+              onChange={e=>setNumber(+e.target.value)}
               onClick={(e) => setNumber('')}
               // style={{borderColor: number.length === 0 ? '#26C2AE' : '#E17052'}}
             />
           </form>
         </div>
         <TipCalc className={card.tip} 
-        num={num} 
-        setNum={setNum}
-        total={total} 
-        setTotal={setTotal}
+          bill={bill}
+          setBill={setBill}
+          number={number}
+          setNumber={setNumber}
+          custom={custom}
+          setCustom={setCustom}
+          value={value}
+          setValue={setValue}
         />
       </div>
     </div>

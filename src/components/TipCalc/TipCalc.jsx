@@ -2,7 +2,24 @@ import React from 'react'
 import tip from './Tip.module.css'
 import { useState } from 'react';
 
-const TipCalc = ({num, setNum, total, setTotal}) => {
+const TipCalc = ({  setNum, bill,  number,  custom, value}) => {
+  const [active, setActive] = useState(false)
+  
+  const isActive = () => {
+    setActive(!active)
+  }
+
+  const tipOutput = bill !== "" && number !== "" && number !== "0" ?
+    ((Number(bill) * Number(custom)) / (100 * Number(number))).toFixed(2) : "0.00"
+  
+  const btnTipOutput = bill !== "" && number !== "" && number !== "0" && isActive ?
+    ((Number(bill) * Number(value)) / (100 * Number(number))).toFixed(2) : "0.00"
+  
+  const totalOutput = bill !== "" && number !== "" && number !== "0" ?
+    (Number(bill) * (1 + (Number(custom) / 100)) / Number(number)).toFixed(2) : "0.00"
+  
+  const btnTotalOutput =bill !== "" && number !== "" && number !== "0" && isActive?
+    (Number(bill) * (1 + (Number(value) / 100)) / Number(number)).toFixed(2) : "0.00"
     
     return (
       <div className={tip.container}>
@@ -15,7 +32,7 @@ const TipCalc = ({num, setNum, total, setTotal}) => {
             <input
               type="text"
               className={tip.tip__input}
-              value={num}
+              value={isActive ? btnTipOutput: tipOutput}
               onChange={(e) => setNum(e.target.value)}
               
             />
@@ -30,7 +47,7 @@ const TipCalc = ({num, setNum, total, setTotal}) => {
             contentEditable='off'
               type="text"
               className={tip.tip__input}
-              value={total}
+              value={isActive ? btnTotalOutput : totalOutput}
             //   onChange={(e) => setTotal(e.target.value)}
             />
           </form>
