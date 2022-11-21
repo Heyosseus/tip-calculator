@@ -34,9 +34,9 @@ const Card = ({bill, setBill, number, setNumber, custom, setCustom}) => {
               <input
                 type="text"
                 className={card.btn__input}
-                value={custom}
-                onClick={()=>setCustom('')}
-                onChange={e=>setCustom(+e.target.value)}
+                value={custom.value}
+                onClick={()=>setCustom({value: '', isActive: true})}
+                onChange={e=>setCustom(e.target.value)}
               />
             </button>
           </div>
