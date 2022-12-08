@@ -5,7 +5,7 @@ import { useState } from 'react';
 function App() {
   const [bill, setBill] = useState(0);
   const [number, setNumber] = useState(0);
-  const [custom, setCustom] = useState({ value: 'Custom', isActive: false });
+  const [custom, setCustom] = useState('Custom');
   
   return (
     <div className={styles.container}>
