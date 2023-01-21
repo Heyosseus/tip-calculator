@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/tip-calculator-app/static/css/main.360823e6.css",
+    "main.js": "/tip-calculator-app/static/js/main.a56ce507.js",
+    "static/media/icon-dollar.svg": "/tip-calculator-app/static/media/icon-dollar.9f9be3534a9295a65957.svg",
+    "static/media/icon-person.svg": "/tip-calculator-app/static/media/icon-person.65bfd20465dd1d2cb58c.svg",
+    "index.html": "/tip-calculator-app/index.html",
+    "main.360823e6.css.map": "/tip-calculator-app/static/css/main.360823e6.css.map",
+    "main.a56ce507.js.map": "/tip-calculator-app/static/js/main.a56ce507.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.360823e6.css",
+    "static/js/main.a56ce507.js"
+  ]
+}
